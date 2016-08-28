@@ -12,8 +12,8 @@
 
 int main(int argc, char **argv)
 {
-    char buffer[BUFFER_SIZE];
-    bzero((void*)buffer, sizeof(char) * BUFFER_SIZE);
+    char buffer[BUFFER_SIZE] = {'\0'};
+    //bzero((void*)buffer, sizeof(char) * BUFFER_SIZE);
     int res = read(STDIN_FILENO, (void*)buffer, (size_t)BUFFER_SIZE);
 
     // Если ошибка чтения или ничего не прочитали.
